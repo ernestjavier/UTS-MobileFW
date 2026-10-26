@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "description": "REST API untuk aplikasi Cookpedia",
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js"
