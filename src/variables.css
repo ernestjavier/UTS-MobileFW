@@ -1,0 +1,177 @@
+/**
+ * Cookpedia Theme Variables
+ * Color Palette:
+ * Primary: Orange #F47C38
+ * Background: Cream #FFF8F0
+ * Surface/Card: White #FFFFFF
+ * Main Text: Dark Brown #34302D
+ * Secondary Text: Muted Gray #8A817A
+ * Accent: Soft Orange #FFE6D2
+ * Error: #D64545
+ */
+
+:root {
+  /* Ionic Color: Primary */
+  --ion-color-primary: #f47c38;
+  --ion-color-primary-rgb: 244, 124, 56;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #d76d31;
+  --ion-color-primary-tint: #f5894c;
+
+  /* Ionic Color: Secondary */
+  --ion-color-secondary: #ffe6d2;
+  --ion-color-secondary-rgb: 255, 230, 210;
+  --ion-color-secondary-contrast: #34302d;
+  --ion-color-secondary-contrast-rgb: 52, 48, 45;
+  --ion-color-secondary-shade: #e0cab9;
+  --ion-color-secondary-tint: #ffe9d7;
+
+  /* Ionic Color: Light / Background */
+  --ion-color-light: #fff8f0;
+  --ion-color-light-rgb: 255, 248, 240;
+  --ion-color-light-contrast: #34302d;
+  --ion-color-light-contrast-rgb: 52, 48, 45;
+  --ion-color-light-shade: #e0dad3;
+  --ion-color-light-tint: #fff9f2;
+
+  /* Ionic Color: Danger / Error */
+  --ion-color-danger: #d64545;
+  --ion-color-danger-rgb: 214, 69, 69;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #bc3d3d;
+  --ion-color-danger-tint: #da5858;
+
+  /* Custom Cookpedia tokens */
+  --cookpedia-primary: #f47c38;
+  --cookpedia-bg: #fff8f0;
+  --cookpedia-surface: #ffffff;
+  --cookpedia-text-main: #34302d;
+  --cookpedia-text-muted: #8a817a;
+  --cookpedia-accent: #ffe6d2;
+  --cookpedia-error: #d64545;
+
+  /* Global background & text */
+  --ion-background-color: #fff8f0;
+  --ion-text-color: #34302d;
+  --ion-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Base Body & Container styling */
+body {
+  background-color: var(--cookpedia-bg);
+  color: var(--cookpedia-text-main);
+  font-family: var(--ion-font-family);
+  margin: 0;
+  padding: 0;
+}
+
+/* App container — fills full window on desktop, looks mobile only on small viewports */
+ion-app {
+  background-color: var(--cookpedia-bg);
+}
+
+.app-viewport-wrapper {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--cookpedia-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Only on small / mobile viewports (e.g. F12 device emulation) apply mobile constraints */
+@media (max-width: 480px) {
+  .app-viewport-wrapper {
+    max-width: 480px;
+  }
+}
+
+/* Card and Surface styling */
+ion-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(52, 48, 45, 0.06);
+  background: var(--cookpedia-surface);
+  border: 1px solid rgba(244, 124, 56, 0.08);
+}
+
+/* Cookpedia CSS helper classes for Ionic toolbars and contents */
+.cookpedia-header-toolbar {
+  --background: #fff8f0;
+  --color: #34302d;
+  --border-color: rgba(244, 124, 56, 0.15);
+  border-bottom: 1px solid rgba(244, 124, 56, 0.15);
+}
+
+.cookpedia-content {
+  --background: #fff8f0;
+  --color: #34302d;
+}
+
+/* Brand row in the header: left-aligned on desktop, centered on mobile */
+.cookpedia-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 6px 16px;
+}
+
+@media (max-width: 480px) {
+  .cookpedia-brand {
+    justify-content: center;
+  }
+}
+
+/* Bordered card that holds the login form */
+.cookpedia-auth-card {
+  background: #ffffff;
+  border: 1px solid rgba(244, 124, 56, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(244, 124, 56, 0.08);
+  padding: 32px 28px;
+}
+
+.cookpedia-footer-toolbar {
+  --background: #fff8f0;
+  --color: #8a817a;
+  --border-color: rgba(244, 124, 56, 0.15);
+  border-top: 1px solid rgba(244, 124, 56, 0.15);
+}
+
+.cookpedia-modal-toolbar {
+  --background: #fff8f0;
+  --color: #34302d;
+  border-bottom: 1px solid #ffe6d2;
+}
+
+.cookpedia-modal-footer-toolbar {
+  --background: #ffffff;
+  border-top: 1px solid #ffe6d2;
+}
+
+.cookpedia-tab-bar {
+  --background: #ffffff;
+  --border: 1px solid #ffe6d2;
+  --color: #8a817a;
+  --color-selected: #f47c38;
+  height: 62px;
+  box-shadow: 0 -4px 16px rgba(52, 48, 45, 0.05);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+ion-tab-button {
+  --color: #8a817a;
+  --color-selected: #f47c38;
+}
+
+ion-tab-button.tab-selected ion-icon,
+ion-tab-button.tab-selected ion-label {
+  color: #f47c38 !important;
+  font-weight: 600;
+}
+
