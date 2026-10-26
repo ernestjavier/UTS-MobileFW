@@ -26,8 +26,8 @@ node -v
 **Cara A: pakai Git**
 
 ```bash
-git clone https://github.com/<username>/<nama-repo>.git
-cd <nama-repo>
+git clone https://github.com/ernestjavier/UTS-MobileFW.git
+cd UTS-MobileFW
 ```
 
 **Cara B: tanpa Git**
@@ -111,8 +111,8 @@ Setelah mengubah `.env`, hentikan frontend (`Ctrl + C`) lalu jalankan lagi `npm 
 ## Ringkasan perintah
 
 ```bash
-git clone https://github.com/<username>/<nama-repo>.git
-cd <nama-repo>
+git clone https://github.com/ernestjavier/UTS-MobileFW.git
+cd UTS-MobileFW
 npm install
 cd server && npm install && npm start      # terminal 1
 npm run dev                                # terminal 2, dari folder utama
